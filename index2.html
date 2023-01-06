@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #sticky_scroller {
+        background: #ffedab;
+        overflow: inherit;
+        min-height: auto;
+        padding: 80px 0;
+      }
+      #sticky_scroller .row {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+      #sticky_scroller .col-1 {
+        min-width: 50%;
+        width: 50%;
+        max-width: 632px;
+        height: 100vh;
+        /* max-height: 700px;
+	 */
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0%;
+        transform: translateY(0%);
+      }
+      #sticky_scroller .col-2 {
+        /* position: relative; */
+        max-width: 632px;
+
+        width: 50%;
+        min-width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: sticky;
+        top: 0%;
+        
+      }
+
+      #sticky_scroller .section1,
+      #sticky_scroller .section2,
+      #sticky_scroller .section3 .active {
+        opacity: 1;
+        background-position: 50% 50%;
+        filter: blur(0);
+      }
+
+      #sticky_scroller .section1,
+      #sticky_scroller .section2,
+      #sticky_scroller .section3 {
+        position: relative;
+        height: 100vh;
+        /* max-height: 700px;
+	 */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 400px;
+        filter: blur(30px);
+        opacity: 0;
+        background-position: 50% 40%;
+        transition: filter 0.4s ease, opacity 0.4s ease,
+          background-position 0.4s ease;
+      }
+      #sticky_scroller .scroller-illustration-img {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      #sticky_scroller .scroller-illustration-img:after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        background-color: black;
+        opacity: 0;
+        transition: 0.5s ease all;
+      }
+      #sticky_scroller .scroller-illustration-img:before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("~/assets/imgs/cover-disp.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: 0.5s ease all;
+      }
+      #sticky_scroller #section2-illustration:after {
+        opacity: 1;
+      }
+      #sticky_scroller #section3-illustration:before {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sticky_scroller">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-1">
+                    <div class="scroller-illustration-container">
+                        <div class="scroller-illustration-img" id="section1-illustration">
+                            <img src="~/assets/imgs/device-monitor.png" alt="device monitor" class="device-monitor img-fluid" />
+                        </div>
+                    </div>
+                </div> -->
+          <div class="col-2">
+            <section class="section1" id="section1">
+              <h4 class="text-uppercase sub-gold">Active Mode</h4>
+              <h3 class="head-level-4">
+                Precise monitoring, intuitive display
+              </h3>
+              <p class="">
+                The device displays the AQI using the LED indicator, the display
+                is off to save the battery when not in use.
+              </p>
+            </section>
+            <section class="section2" id="section2">
+              <h4 class="text-uppercase sub-gold">Sleep Mode</h4>
+              <h3 class="head-level-4">
+                Purification that's quiet as a whisper
+              </h3>
+              <p class="">
+                It saves your effort and reduces energy use and, also helps you
+                sleep by creating a quieter air flow, without display lighting.
+              </p>
+            </section>
+            <section class="section3" id="section3">
+              <h4 class="text-uppercase sub-gold">Explore Mode</h4>
+              <h3 class="head-level-4">
+                Check the air purity with just a glance
+              </h3>
+              <p class="">
+                The device can be taken to other areas of the house to check the
+                AQI. This mode displays air quality but doesn’t allow control of
+                the air purifier.
+              </p>
+            </section>
+          </div>
+          <div class="col-2">
+            <section class="section1" id="section1">
+              <h4 class="text-uppercase sub-gold">Active Mode</h4>
+              <h3 class="head-level-4">
+                Precise monitoring, intuitive display
+              </h3>
+              <p class="">
+                The device displays the AQI using the LED indicator, the display
+                is off to save the battery when not in use.
+              </p>
+            </section>
+            <section class="section2" id="section2">
+              <h4 class="text-uppercase sub-gold">Sleep Mode</h4>
+              <h3 class="head-level-4">
+                Purification that's quiet as a whisper
+              </h3>
+              <p class="">
+                It saves your effort and reduces energy use and, also helps you
+                sleep by creating a quieter air flow, without display lighting.
+              </p>
+            </section>
+            <section class="section3" id="section3">
+              <h4 class="text-uppercase sub-gold">Explore Mode</h4>
+              <h3 class="head-level-4">
+                Check the air purity with just a glance
+              </h3>
+              <p class="">
+                The device can be taken to other areas of the house to check the
+                AQI. This mode displays air quality but doesn’t allow control of
+                the air purifier.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            var viewportHeight = window.innerHeight;
+            var activeSec = entry.intersectionRect.height / viewportHeight;
+            if (activeSec > 0) {
+              // document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+              console.log(id);
+              var illustrationMain = $(".scroller-illustration-img");
+              var illustrationMainId = id + "-illustration";
+              jQuery(illustrationMain).attr("id", illustrationMainId);
+            } else {
+              // document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50%", threshold: 0 }
+      );
+      // Track all sections that have an `id` applied
+      document
+        .querySelectorAll("#sticky_scroller section[id]")
+        .forEach((section) => {
+          observer.observe(section);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Futura;
+      }
+
+      .vh {
+        height: 100vh;
+        background-color: rgba(255, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vw;
+        font-weight: bold;
+      }
+
+      .vh:before {
+        content: "100VH";
+      }
+
+      .philosophie {
+        position: relative;
+      }
+
+      .indicators {
+        left: 2rem;
+        top: 0;
+        margin: 10vh 0;
+        height: 80vh;
+        width: 3px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+      }
+
+      .indicator {
+        width: 100%;
+        background-color: #adadad;
+        flex-grow: 1;
+        margin: 2px 0;
+      }
+
+      .wrapper .point {
+        height: 90vh;
+        z-index: 4;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 16rem;
+        flex-direction: row-reverse;
+        padding: 4rem;
+        /* outline: 1px solid red; */
+        color: white;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        background: linear-gradient(to top, white 50%, #032754 0%);
+      }
+      .wrapper:before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        background: white;
+        border-radius: 0 60px 0 0;
+      }
+      .wrapper:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        /*   bottom:0; */
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(45deg, #03254c 39%, #053890 110%);
+        border-radius: 0px 0 0 60px;
+      }
+
+      .philosophie .wrapper {
+        height: 100vh;
+        width: 100%;
+      }
+
+      .point article {
+        flex-basis: 45%;
+        margin-right: auto;
+      }
+
+      .point img {
+        flex-basis: 30%;
+        max-width: 25vw;
+        height: auto;
+      }
+      .svg-slider-path-line-container {
+        /* width: 35%; */
+        /* height: 100%; */
+        position: relative;
+        z-index: 4;
+      }
+
+      .svg-slider-path-line {
+        position: absolute;
+        /* top: 0; */
+        top: 10rem;
+        right: 8.5rem;
+      }
+
+      .svg-slider-path {
+        position: absolute;
+      }
+
+      .pill-child4 {
+        position: absolute;
+        /* top: 5px; */
+        offset-path: path("M1 95C1 43.0852 43.0852 1 95 1H189V609H1V95Z");
+        offset-distance: 0%;
+        animation: slider-pill 5s reverse ease-in-out infinite;
+      }
+
+      @keyframes slider-pill {
+        from {
+          offset-distance: 0%;
+        }
+        to {
+          offset-distance: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="vh"></section>
+
+    <section class="philosophie">
+      <div class="wrapper">
+        <div class="indicators">
+          <!-- <div class="indicator"></div>
+          <div class="indicator"></div>
+          <div class="indicator"></div>
+          <div class="indicator"></div>
+          <div class="indicator"></div> -->
+        </div>
+        <div class="point">
+          <article>
+            <h3>Title 1</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </article>
+          <img
+            src="https://source.unsplash.com/random/500x500"
+            alt="random"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="point">
+          <article>
+            <h3>Title 2</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </article>
+          <img
+            src="https://source.unsplash.com/random/510x500"
+            alt="random"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="point">
+          <article>
+            <h3>Title 3</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </article>
+          <img
+            src="https://source.unsplash.com/random/501x500"
+            alt="random"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="point">
+          <article>
+            <h3>Title 4</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </article>
+          <img
+            src="https://source.unsplash.com/random/510x510"
+            alt="random"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="point">
+          <article>
+            <h3>Title 5</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </article>
+          <img
+            src="https://source.unsplash.com/random/510x501"
+            alt="random"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="svg-slider-path-line-container">
+            <div class="svg-slider-path-line">
+              <svg
+                class="svg-slider-path"
+                width="169"
+                height="610"
+                viewBox="0 0 169 610"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 95C1 43.0852 43.0852 1 95 1H189V609H1V95Z"
+                  stroke="#1F436D"
+                  stroke-width="2"
+                />
+              </svg>
+              <svg
+                class="pill-child4"
+                width="40"
+                height="14"
+                viewBox="0 0 40 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="14"
+                  width="14"
+                  height="40"
+                  rx="7"
+                  transform="rotate(-90 0 14)"
+                  fill="url(#paint0_linear_167_1466)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_167_1466"
+                    x1="7"
+                    y1="14"
+                    x2="7"
+                    y2="54"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#30D7F1" />
+                    <stop offset="1" stop-color="#2691F1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+      </div>
+      
+    </section>
+
+    <section class="vh"></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=32"></script> -->
+    <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sunburst"></script>
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script> -->
+
+    <script>
+      ScrollTrigger.defaults({
+        markers: false,
+      });
+
+      var points = gsap.utils.toArray(".point");
+      var indicators = gsap.utils.toArray(".indicator");
+
+      var height = 100 * points.length;
+
+      console.log("height:", height);
+
+      gsap.set(".indicators", { display: "flex" });
+
+      var tl = gsap.timeline({
+        duration: points.length,
+        scrollTrigger: {
+          trigger: ".philosophie",
+          start: "top center",
+          end: "+=" + height + "%",
+          scrub: true,
+          id: "points",
+        },
+      });
+
+      var pinner = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".philosophie .wrapper",
+          start: "top top",
+          end: "+=" + height + "%",
+          scrub: true,
+          pin: ".philosophie .wrapper",
+          pinSpacing: true,
+          id: "pinning",
+        //   markers: true,
+        },
+      });
+
+      points.forEach(function (elem, i) {
+        gsap.set(elem, { position: "absolute", top: 0 });
+
+        tl.to(indicators[i], { backgroundColor: "orange", duration: 0.25 }, i);
+        tl.from(elem.querySelector("img"), { autoAlpha: 0 }, i);
+        tl.from(
+          elem.querySelector("article"),
+          { autoAlpha: 0, translateY: 100 },
+          i
+        );
+
+        if (i != points.length - 1) {
+          tl.to(
+            indicators[i],
+            { backgroundColor: "#adadad", duration: 0.25 },
+            i + 0.75
+          );
+          tl.to(
+            elem.querySelector("article"),
+            { autoAlpha: 0, translateY: -100 },
+            i + 0.75
+          );
+          tl.to(elem.querySelector("img"), { autoAlpha: 0 }, i + 0.75);
+        }
+      });
+    </script>
+  </body>
+</html>
